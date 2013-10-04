@@ -80,6 +80,7 @@ public class ChatListener implements Listener {
 		this.rangedMode = config.getBoolean("ranged-mode", this.rangedMode);
 		this.chatRange = config.getDouble("chat-range", this.chatRange);
 		this.displayNameFormat = config.getString("display-name-format", this.displayNameFormat);
+		
 	}
 
 	@EventHandler
@@ -148,7 +149,7 @@ public class ChatListener implements Listener {
 		String worldName = player.getWorld().getName();
 		String userSuffix = "";
 		if(user.has("minepod.grade.noble")) {
-			userSuffix = "Noble";
+			userSuffix = "&6[Noble]";
 		} else {
 			userSuffix = user.getSuffix(worldName);
 		}
