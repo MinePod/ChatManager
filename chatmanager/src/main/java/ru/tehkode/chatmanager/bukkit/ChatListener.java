@@ -149,7 +149,7 @@ public class ChatListener implements Listener {
 		String worldName = player.getWorld().getName();
 		String userSuffix = "";
 		if(user.has("minepod.grade.noble")) {
-			userSuffix = "&6[Noble]";
+			userSuffix = "&b[Noble]";
 		} else {
 			userSuffix = user.getSuffix(worldName);
 		}
