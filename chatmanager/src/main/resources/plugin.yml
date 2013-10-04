@@ -1,0 +1,7 @@
+name: ChatManager
+main: ru.tehkode.chatmanager.bukkit.ChatManager
+depend: [ PermissionsEx ]
+version: 1.20
+authors: [tehkode, DarkShimy]
+website: www.bukkit.org
+description: Chat management plugin for PermissionsEx
