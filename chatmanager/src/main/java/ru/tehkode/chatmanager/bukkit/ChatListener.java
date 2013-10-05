@@ -148,11 +148,17 @@ public class ChatListener implements Listener {
 		PermissionUser user = PermissionsEx.getPermissionManager().getUser(player);
 		String worldName = player.getWorld().getName();
 		String userSuffix = "";
+		
 		if(user.has("minepod.grade.noble")) {
 			userSuffix = "&b[Noble]";
 		} else {
-			userSuffix = user.getSuffix(worldName);
+			if(user.getSuffix() == null || user.getSuffix() == "null") {
+				userSuffix = "";
+			} else {
+				userSuffix = user.getSuffix(worldName);
+			}
 		}
+		
 		return format.replace("%prefix", this.translateColorCodes(user.getPrefix(worldName))).replace("%suffix", this.translateColorCodes(userSuffix)).replace("%world", this.getWorldAlias(worldName)).replace("%player", player.getDisplayName()).replace("%group", user.getGroupsNames()[0]);
 	}
 
